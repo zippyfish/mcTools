@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>mcTools - Command Generator</title>
+    <link rel="shortcut icon" href="../Impulse_Command_Block.gif" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+</head>
+<body ng-app="Main" ng-cloak>
+    <div layout="column" layout-fill>
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+            <span>mcTools - Command Generator</span>
+            <!-- fill up the space between left and right area -->
+            <span flex></span>
+            <p>
+              1.16 Generator
+            </p>
+          </div>
+        </md-toolbar>
+        <md-content>
+            <md-card id="card1">
+                <md-card-title>
+                  <md-card-title-text>
+                    <span class="md-headline">Book Generator</span>
+                    <span class="md-subhead"></span>
+                  </md-card-title-text>
+                  <md-card-title-media>
+                    <div class="md-media-sm card-media"><img src="../Written_Book.gif" alt="Book"></div>
+                  </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                  <md-button onclick="location.href = '../commands/book_generator.html'">Generate</md-button>
+                  <md-button onclick="document.getElementById('card1').style.visibility = 'hidden';">Hide</md-button>
+                </md-card-actions>
+              </md-card>    
+        </md-content>
+      </div>
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+  
+  <!-- Your application bootstrap  -->
+  <script type="text/javascript">    
+    /**
+     * You must include the dependency on 'ngMaterial' 
+     */
+    angular.module('Main', ['ngMaterial', 'ngMessages']);
+  </script>
+
+</body>
+</html> 
