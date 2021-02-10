@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <link rel="shortcut icon" href="../Written_Book.gif">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Kyle B (zippyfish)">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <script src="./generate.js"></script>
+  <link rel="stylesheet" href="book_generator.css">
+    <!-- <link rel="shortcut icon" href="../Written_Book.gif"> -->
+    <title>Book Generator - mcTools Command Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+</head>
+<body ng-app="BookGenerator" ng-cloak>
+      <!-- App Content  -->
+      <md-card>
+        <md-card-content>
+          <h2>Book Generator</h2>
+          <p>Generate Books, even with buttons! </p>
+          <div class="book" id="book_container"></div> <md-input-container class="book_content">
+            <label>Enter Book Text</label>
+            <textarea name="booktxt" ng-model="book_text" required md-maxlength="150" id="book_txt"></textarea>
+            <div ng-messages="userForm.booxtxt.$error" ng-show="userForm.booktxt.$dirty">
+              <div ng-message="required">This is required!</div>
+              <div ng-message="md-maxlength">That's too long!</div>
+            </div>
+          </md-input-container> 
+          <md-input-container>
+            <label>Enter Book Title</label>
+            <textarea name="book-title" ng-model="book_title" required md-maxlength="150" id="title"></textarea>
+            <div ng-messages="userForm.book-title.$error" ng-show="userForm.book-title.$dirty">
+              <div ng-message="required">This is required!</div>
+              <div ng-message="md-maxlength">That's too long!</div>
+            </div>
+          </md-input-container>
+   <md-input-container>
+  <label>Enter a Book Author</label>
+  <textarea name="author" ng-model="book_author" required md-maxlength="150" id="author"></textarea>
+  <div ng-messages="userForm.author.$error" ng-show="userForm.author.$dirty">
+    <div ng-message="required">This is required!</div>
+    <div ng-message="md-maxlength">That's too long!</div>
+  </div>
+</md-input-container>
+<md-input-container>
+  <label>Tooltip</label>
+  <textarea name="tooltip" ng-model="ttp" required md-maxlength="150" id="ttp"></textarea>
+  <div ng-messages="userForm.tooltip.$error" ng-show="userForm.tooltip.$dirty">
+    <div ng-message="required">This is required!</div>
+    <div ng-message="md-maxlength">That's too long!</div>
+  </div>
+</md-input-container>
+<md-input-container>
+  <label>Command to run on click</label>
+  <textarea name="command" ng-model="cmd_run" required md-maxlength="150" id="cmd"></textarea>
+  <div ng-messages="userForm.command.$error" ng-show="userForm.command.$dirty">
+    <div ng-message="required">This is required!</div>
+    <div ng-message="md-maxlength">That's too long!</div>
+  </div>
+</md-input-container>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button onclick="generate()">Generate</md-button>
+        </md-card-actions>
+       </md-card>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>  
+  <script type="text/javascript">    
+    angular.module('BookGenerator', ['ngMaterial', 'ngMessages']);
+  </script>
+
+</body>
+</html>
